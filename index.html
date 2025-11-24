@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Digital Essencial | Psicóloga Bariátrica</title>
+    <meta name="description" content="Presença profissional, ética e leve para psicólogas bariátricas. Sem virar influencer, sem trair seus valores.">
+    
+    <!-- Importando Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configurando cores e fontes (Redesign: Tons Quentes + Serifa Elegante) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        // Mudança para STONE (Neutros Quentes) para mais acolhimento
+                        neutral: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Lora', 'Georgia', 'serif'], // Serifa para autoridade
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'card': '0 0 0 1px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fontes Google (Inter + Lora) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Ícones Phosphor -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn-primary {
+                @apply inline-flex items-center justify-center rounded-lg bg-primary-700 px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-primary-800 hover:-translate-y-0.5 transition-all duration-200 focus:ring-4 focus:ring-primary-100;
+            }
+            .btn-secondary {
+                @apply inline-flex items-center justify-center rounded-lg border border-neutral-200 bg-white px-8 py-4 text-base font-semibold text-neutral-700 hover:bg-neutral-50 hover:text-primary-700 hover:border-primary-200 transition-all duration-200;
+            }
+            .section-title {
+                @apply font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-neutral-900 leading-tight;
+            }
+            .card-pain {
+                @apply flex items-start gap-4 p-6 bg-white rounded-xl border border-neutral-100 shadow-card hover:shadow-soft transition-shadow duration-300;
+            }
+            /* Mockup CSS Simplificado */
+            .mockup-browser {
+                @apply rounded-t-xl bg-neutral-100 border border-neutral-200 border-b-0 p-2 flex gap-2;
+            }
+            .mockup-dot { @apply w-2.5 h-2.5 rounded-full; }
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Lora', serif; }
+    </style>
+</head>
+<body class="antialiased text-neutral-700 bg-neutral-50 selection:bg-primary-100 selection:text-primary-900">
+
+    <!-- Navbar Transparente -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/80 border-b border-neutral-100/50">
+        <div class="mx-auto flex max-w-screen-xl items-center justify-between p-4 lg:px-8">
+            <div class="font-serif font-bold text-xl tracking-tight text-neutral-900">Setup<span class="text-primary-700">Psi</span></div>
+            <a href="https://wa.me/SEU_NUMERO" class="text-sm font-medium text-neutral-600 hover:text-primary-700 transition-colors flex items-center gap-2 px-4 py-2 rounded-full hover:bg-neutral-100">
+                <i class="ph-bold ph-whatsapp-logo text-lg text-green-600"></i> 
+                <span>Falar no WhatsApp</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- SEÇÃO 1: HERO (Redesign: Layout Humano e Assimétrico) -->
+    <section class="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32 bg-white">
+        <!-- Elementos Decorativos de Fundo -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-neutral-50/50 -skew-x-12 translate-x-32 -z-10"></div>
+        
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                
+                <!-- Coluna de Texto -->
+                <div class="text-left">
+                    <div class="inline-flex items-center gap-2 rounded-full bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-800 border border-primary-100 mb-8">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-600"></span>
+                        </span>
+                        Estrutura Digital Essencial
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-neutral-900 leading-[1.15] mb-6">
+                        Para Psicólogas Bariátricas
+                    </h1>
+
+                    <p class="text-xl text-neutral-600 leading-relaxed mb-8 max-w-lg">
+                        Presença profissional, ética e leve para que as pacientes certas encontrem seu trabalho – <span class="text-neutral-900 font-medium bg-primary-50 px-1">sem você precisar virar influencer.</span>
+                    </p>
+
+                    <div class="prose prose-neutral text-neutral-500 mb-10 border-l-4 border-primary-200 pl-6 py-1">
+                        <p class="mb-2">
+                            Você não precisa trair seus valores, nem virar "psicóloga do Instagram", para ser encontrada por pacientes bariátricos que respeitam o processo.
+                        </p>
+                        <p>
+                            Aqui, a sua clínica vem primeiro – a tecnologia e o marketing só organizam a casinha digital.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#como-funciona" class="btn-primary w-full sm:w-auto">
+                            Quero organizar minha estrutura digital
+                        </a>
+                        <div class="flex flex-col items-center sm:items-start justify-center">
+                            <a href="https://wa.me/SEU_NUMERO" class="text-neutral-600 font-medium hover:text-primary-700 underline decoration-neutral-300 underline-offset-4 transition-colors">
+                                Quero conversar sobre o projeto
+                            </a>
+                            <span class="text-xs text-neutral-400 mt-1">Prefere entender antes?</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna de Imagem (Visual Humano) -->
+                <div class="relative lg:h-auto h-96 w-full rounded-2xl overflow-hidden shadow-2xl shadow-neutral-200/50 order-first lg:order-last">
+                    <!-- Overlay Gradiente -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent z-10"></div>
+                    
+                    <img 
+                        src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                        alt="Psicóloga em ambiente de trabalho calmo e profissional" 
+                        class="absolute inset-0 w-full h-full object-cover"
+                    >
+                    
+                    <!-- Card Flutuante (Prova Social Visual) -->
+                    <div class="absolute bottom-6 left-6 right-6 z-20 bg-white/95 backdrop-blur-sm p-5 rounded-xl border border-white/50 shadow-lg">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 bg-green-100 rounded-full text-green-700">
+                                <i class="ph-fill ph-shield-check text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-wider text-neutral-400">Foco</p>
+                                <p class="text-sm font-semibold text-neutral-800">Ética & Profissionalismo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: DORES (Redesign: Grid de Cards Limpos) -->
+    <section class="py-20 bg-neutral-100">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="section-title mb-4">Isso é para você, psicóloga bariátrica, se…</h2>
+                <div class="h-1 w-20 bg-primary-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="card-pain group">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-white border border-neutral-200 flex items-center justify-center text-primary-700 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-users text-xl"></i>
+                    </div>
+                    <p class="text-sm leading-relaxed">Você atende (ou quer atender) pacientes pré e pós-cirurgia bariátrica, pessoas com histórico de obesidade, compulsão alimentar e vergonha corporal.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card-pain group">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-white border border-neutral-200 flex items-center justify-center text-primary-700 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-money-wavy text-xl"></i>
+                    </div>
+                    <p class="text-sm leading-relaxed">Sente culpa ou vergonha só de pensar em “fazer marketing”, como se estivesse se vendendo.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card-pain group">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-white border border-neutral-200 flex items-center justify-center text-primary-700 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-eye-slash text-xl"></i>
+                    </div>
+                    <p class="text-sm leading-relaxed">Morre de medo do julgamento de colegas, de virar “a psicóloga do Instagram” ou de parecer menos séria.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="card-pain group">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-white border border-neutral-200 flex items-center justify-center text-primary-700 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-desktop text-xl"></i>
+                    </div>
+                    <p class="text-sm leading-relaxed">Fica travada com tecnologia: termos como domínio, hospedagem, Google, SSL, link na bio… te dão vontade de desistir.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="card-pain group">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-white border border-neutral-200 flex items-center justify-center text-primary-700 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-calendar-x text-xl"></i>
+                    </div>
+                    <p class="text-sm leading-relaxed">Já postou conteúdos, reels, reflexões – mas isso não virou uma agenda previsível com bariátricos.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="card-pain group">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-white border border-neutral-200 flex items-center justify-center text-primary-700 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-warning-octagon text-xl"></i>
+                    </div>
+                    <p class="text-sm leading-relaxed">Sente que está sempre pisando em ovos para falar de peso, corpo, falhas pós-cirurgia, com medo de machucar alguém.</p>
+                </div>
+                <!-- Card 7 -->
+                <div class="card-pain group">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-white border border-neutral-200 flex items-center justify-center text-primary-700 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-battery-low text-xl"></i>
+                    </div>
+                    <p class="text-sm leading-relaxed">Está cansada de tentar “dar conta de tudo”: clínica, estudos, supervisões, burocracias… e ainda ter que aprender marketing sozinha.</p>
+                </div>
+                <!-- Card 8 -->
+                <div class="card-pain group">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-white border border-neutral-200 flex items-center justify-center text-primary-700 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-user-focus text-xl"></i>
+                    </div>
+                    <p class="text-sm leading-relaxed">Olha em volta e sente uma certa solidão profissional, sem referências de psicólogas bariátricas com posicionamento ético e humano.</p>
+                </div>
+                <!-- Card 9 (Destaque) -->
+                <div class="card-pain group bg-primary-50 border-primary-100 lg:col-span-1">
+                    <div class="min-w-[40px] h-[40px] rounded-full bg-white border border-primary-200 flex items-center justify-center text-primary-700 shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                        <i class="ph-bold ph-heart-break text-xl"></i>
+                    </div>
+                    <p class="text-sm leading-relaxed font-medium text-neutral-800">Se pega pensando se não está traindo a própria ética quando investe em marketing, em vez de mais um curso clínico.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-xl font-serif italic text-neutral-600">Se, ao ler isso, você pensou “sou eu”, essa página foi escrita exatamente para você.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: CONTEXTO (Redesign: Foco na Leitura Confortável) -->
+    <section class="py-24 bg-white">
+        <div class="mx-auto max-w-3xl px-6">
+            <div class="text-center mb-10">
+                <h2 class="section-title mb-6">Não é falta de capacidade sua. <br>É o contexto em que você está inserida.</h2>
+            </div>
+            
+            <div class="prose prose-lg prose-neutral mx-auto leading-loose text-neutral-600">
+                <p>
+                    Fazer marketing já é desconfortável para muitas psicólogas. Quando o tema é bariátrica, tudo fica ainda mais sensível:
+                </p>
+                <ul class="my-6 space-y-3 list-none pl-0">
+                    <li class="flex gap-3">
+                        <i class="ph-fill ph-dot-outline text-2xl text-primary-300"></i>
+                        Você lida todos os dias com culpa, vergonha, tentativas e recaídas;
+                    </li>
+                    <li class="flex gap-3">
+                        <i class="ph-fill ph-dot-outline text-2xl text-primary-300"></i>
+                        Qualquer palavra mal colocada pode reforçar gordofobia, pressão estética ou promessas irreais;
+                    </li>
+                    <li class="flex gap-3">
+                        <i class="ph-fill ph-dot-outline text-2xl text-primary-300"></i>
+                        Ao mesmo tempo, o código de ética é claro sobre limites da divulgação e sobre não transformar a clínica em espetáculo.
+                    </li>
+                </ul>
+                <p class="font-medium text-neutral-800">
+                    Resultado? Mesmo sendo ótima na clínica, você se sente travada, duvida de cada post, e muitas vezes conclui: “melhor não falar nada”.
+                </p>
+                
+                <div class="my-10 p-8 bg-neutral-50 rounded-2xl border-l-4 border-primary-600 shadow-sm">
+                    <p class="mb-0 text-neutral-700 italic">
+                        Não é porque você não “leva jeito para marketing”. É porque você nunca teve formação em negócios, marketing ou tecnologia – e os modelos que aparecem por aí foram pensados para infoprodutores e influencers, não para psicólogas que trabalham com um público tão delicado.
+                    </p>
+                </div>
+
+                <p class="text-center text-xl font-serif text-primary-800">
+                    A boa notícia: existe um caminho do meio, em que a divulgação é extensão do cuidado, não uma traição à ética.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: SOLUÇÃO (Redesign: Fundo Escuro + Mockups Visuais) -->
+    <section id="solucao" class="py-24 bg-neutral-900 text-white relative overflow-hidden">
+        <!-- Detalhe decorativo -->
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-500 to-transparent opacity-30"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary-900 rounded-full blur-[100px] opacity-40"></div>
+
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Texto da Solução -->
+                <div>
+                    <div class="text-primary-400 font-bold tracking-widest uppercase text-xs mb-4">Apresentando</div>
+                    <h2 class="font-serif text-4xl lg:text-5xl mb-6 leading-tight">A Estrutura Digital Essencial</h2>
+                    <p class="text-xl text-neutral-300 mb-8 font-light">
+                        Sua casinha digital mínima, ética e profissional – feita sob medida para psicólogas bariátricas.
+                    </p>
+                    
+                    <div class="space-y-6 text-neutral-300 leading-relaxed">
+                        <p>
+                            A Estrutura Digital Essencial não é um kit pronto, nem um pacote genérico de “site para profissionais de saúde”. É um trabalho 1:1, em que eu:
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex gap-3 items-start">
+                                <i class="ph-bold ph-check text-primary-400 mt-1"></i>
+                                <span>Começo pela sua identidade clínica e pelo público bariátrico que você quer (ou já atende);</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <i class="ph-bold ph-check text-primary-400 mt-1"></i>
+                                <span>Traduzo isso em uma presença digital mínima, bonita e organizada;</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <i class="ph-bold ph-check text-primary-400 mt-1"></i>
+                                <span>E cuido da parte técnica para você não precisar surtar com domínio, hospedagem, e-mail, SSL e afins.</span>
+                            </li>
+                        </ul>
+                        <div class="p-4 rounded-lg bg-neutral-800/50 border border-neutral-700 mt-6">
+                            <p class="text-white font-medium">
+                                Em vez de te afogar em ferramentas, funis complexos e fórmulas agressivas de marketing, nós organizamos o essencial: quem você é → pra quem você fala → como as pessoas certas vão te encontrar com segurança, ética e leveza.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mockup Visual Abstrato -->
+                <div class="relative">
+                    <!-- Representação do Notebook -->
+                    <div class="bg-neutral-800 rounded-xl p-4 shadow-2xl border border-neutral-700 transform translate-y-4 translate-x-4 lg:translate-x-8">
+                        <div class="mockup-browser mb-3 bg-neutral-700 border-neutral-600">
+                            <div class="mockup-dot bg-red-400"></div>
+                            <div class="mockup-dot bg-yellow-400"></div>
+                            <div class="mockup-dot bg-green-400"></div>
+                        </div>
+                        <div class="bg-white rounded h-48 lg:h-64 flex items-center justify-center overflow-hidden relative">
+                             <!-- Wireframe simples do site -->
+                             <div class="absolute top-0 w-full h-8 bg-neutral-100 border-b border-neutral-200"></div>
+                             <div class="absolute top-12 left-4 w-1/3 h-4 bg-neutral-200 rounded"></div>
+                             <div class="absolute top-20 left-4 w-2/3 h-2 bg-neutral-100 rounded"></div>
+                             <div class="absolute top-24 left-4 w-1/2 h-2 bg-neutral-100 rounded"></div>
+                             <div class="absolute top-12 right-4 w-24 h-24 bg-primary-100 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Representação do Celular -->
+                    <div class="absolute -bottom-8 -left-2 lg:-left-8 w-32 lg:w-40 bg-neutral-900 rounded-[2rem] p-2 shadow-2xl border-4 border-neutral-700">
+                        <div class="bg-white rounded-[1.5rem] h-48 lg:h-64 overflow-hidden relative">
+                             <!-- Wireframe Google Profile -->
+                             <div class="bg-primary-600 h-12 w-full"></div>
+                             <div class="w-12 h-12 bg-neutral-200 rounded-full border-2 border-white absolute top-6 left-4"></div>
+                             <div class="mt-8 ml-4 w-20 h-3 bg-neutral-800 rounded"></div>
+                             <div class="mt-2 ml-4 w-16 h-2 bg-neutral-300 rounded"></div>
+                             <div class="mt-4 mx-4 flex gap-2">
+                                 <div class="flex-1 h-6 bg-primary-50 rounded"></div>
+                                 <div class="flex-1 h-6 bg-neutral-100 rounded"></div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5: MÉTODO (Redesign: Steps Horizontais Limpos) -->
+    <section id="metodo" class="py-24 bg-white">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="section-title">O método: clareza → presença → infraestrutura</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <!-- Linha Conectora (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-neutral-100 -z-10 transform scale-x-90"></div>
+
+                <!-- Etapa 1 -->
+                <div class="relative bg-white pt-4">
+                    <div class="w-24 h-24 mx-auto bg-white border-2 border-primary-100 rounded-full flex items-center justify-center text-4xl font-serif text-primary-700 shadow-sm mb-8">1</div>
+                    <div class="text-center px-4">
+                        <h3 class="font-serif text-2xl text-neutral-900 mb-4">Clareza Estratégica</h3>
+                        <div class="text-left bg-neutral-50 p-6 rounded-xl border border-neutral-100">
+                            <div class="mb-4">
+                                <strong class="block text-primary-800 text-sm uppercase tracking-wide mb-1">Mapa Estratégico</strong>
+                                <p class="text-sm text-neutral-600">Um documento que traduz, em linguagem simples: quem você é como psicóloga, quem você quer atender (especialmente bariátricos), e como se posicionar.</p>
+                            </div>
+                            <div>
+                                <strong class="block text-primary-800 text-sm uppercase tracking-wide mb-1">Nome & Domínio</strong>
+                                <p class="text-sm text-neutral-600">Verificamos domínios disponíveis, evitando nomes confusos, difíceis de pronunciar ou que possam soar antiéticos.</p>
+                            </div>
+                        </div>
+                        <p class="italic text-neutral-500 text-sm mt-4">“Antes de apertar qualquer botão, a gente organiza sua base: sua identidade clínica, o público bariátrico e um nome/domínio que transmitam confiança.”</p>
+                    </div>
+                </div>
+
+                <!-- Etapa 2 -->
+                <div class="relative bg-white pt-4">
+                    <div class="w-24 h-24 mx-auto bg-white border-2 border-primary-100 rounded-full flex items-center justify-center text-4xl font-serif text-primary-700 shadow-sm mb-8">2</div>
+                    <div class="text-center px-4">
+                        <h3 class="font-serif text-2xl text-neutral-900 mb-4">Presença Profissional</h3>
+                        <div class="text-left bg-neutral-50 p-6 rounded-xl border border-neutral-100">
+                            <div class="mb-4">
+                                <strong class="block text-primary-800 text-sm uppercase tracking-wide mb-1">Página Vitrine</strong>
+                                <p class="text-sm text-neutral-600">Uma página única, clara e objetiva, que explica o que você faz, para quem é, como funciona o acompanhamento e como entrar em contato.</p>
+                            </div>
+                            <div class="mb-4">
+                                <strong class="block text-primary-800 text-sm uppercase tracking-wide mb-1">Google Profile</strong>
+                                <p class="text-sm text-neutral-600">Configuração do seu perfil no Google. Assim, quando alguém digita seu nome ou “psicóloga bariátrica”, encontra você.</p>
+                            </div>
+                            <div>
+                                <strong class="block text-primary-800 text-sm uppercase tracking-wide mb-1">Link Único</strong>
+                                <p class="text-sm text-neutral-600">Um “link na bio” com o seu domínio e um cartão digital clicável. Mais profissional do que “apenas um número solto”.</p>
+                            </div>
+                        </div>
+                        <p class="italic text-neutral-500 text-sm mt-4">“Aqui, montamos uma presença mínima e profissional para que qualquer pessoa consiga te achar, entender o que você faz e falar com você sem esforço.”</p>
+                    </div>
+                </div>
+
+                <!-- Etapa 3 -->
+                <div class="relative bg-white pt-4">
+                    <div class="w-24 h-24 mx-auto bg-white border-2 border-primary-100 rounded-full flex items-center justify-center text-4xl font-serif text-primary-700 shadow-sm mb-8">3</div>
+                    <div class="text-center px-4">
+                        <h3 class="font-serif text-2xl text-neutral-900 mb-4">Infraestrutura Técnica</h3>
+                        <div class="text-left bg-neutral-50 p-6 rounded-xl border border-neutral-100">
+                            <div class="mb-4">
+                                <strong class="block text-primary-800 text-sm uppercase tracking-wide mb-1">Segurança</strong>
+                                <p class="text-sm text-neutral-600">Registro do domínio, configuração de hospedagem e SSL, para que seu site não apareça como “não seguro” e passe confiança.</p>
+                            </div>
+                            <div>
+                                <strong class="block text-primary-800 text-sm uppercase tracking-wide mb-1">E-mail Profissional</strong>
+                                <p class="text-sm text-neutral-600">Troca do @gmail.com pelo e-mail com o nome da sua clínica ou da sua marca. Cada contato passa mais seriedade.</p>
+                            </div>
+                        </div>
+                        <p class="italic text-neutral-500 text-sm mt-4">“Por trás da vitrine, eu deixo o lado técnico organizado e seguro, para você não se preocupar com site fora do ar, e-mail caindo no spam ou avisos de ‘não seguro’.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 6: ENTREGAS (Redesign: Lista Organizada com Ícones) -->
+    <section class="py-24 bg-neutral-100">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-center mb-16">Tudo o que está incluso na Estrutura Digital Essencial</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card Item -->
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-primary-200 transition-colors flex gap-4 items-start">
+                    <div class="p-3 bg-primary-50 rounded-lg text-primary-700 shrink-0">
+                        <i class="ph-bold ph-compass text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-neutral-900 mb-2">Mapa Estratégico de Marca & Público</h4>
+                        <p class="text-sm text-neutral-600">Para você ter clareza sobre quem quer atender e como se posicionar com ética no nicho bariátrico.</p>
+                    </div>
+                </div>
+                 <!-- Card Item -->
+                 <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-primary-200 transition-colors flex gap-4 items-start">
+                    <div class="p-3 bg-primary-50 rounded-lg text-primary-700 shrink-0">
+                        <i class="ph-bold ph-check-square text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-neutral-900 mb-2">Validação de Nome & Domínio</h4>
+                        <p class="text-sm text-neutral-600">Para evitar nomes confusos ou pouco profissionais e garantir um endereço na internet que transmita confiança.</p>
+                    </div>
+                </div>
+                <!-- Card Item -->
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-primary-200 transition-colors flex gap-4 items-start">
+                    <div class="p-3 bg-primary-50 rounded-lg text-primary-700 shrink-0">
+                        <i class="ph-bold ph-layout text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-neutral-900 mb-2">Página Vitrine Profissional</h4>
+                        <p class="text-sm text-neutral-600">Para que pacientes bariátricos entendam rapidamente quem você é, como trabalha e se sentirem seguras para entrar em contato.</p>
+                    </div>
+                </div>
+                <!-- Card Item -->
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-primary-200 transition-colors flex gap-4 items-start">
+                    <div class="p-3 bg-primary-50 rounded-lg text-primary-700 shrink-0">
+                        <i class="ph-bold ph-google-logo text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-neutral-900 mb-2">Presença Profissional no Google</h4>
+                        <p class="text-sm text-neutral-600">Para que sua clínica seja encontrada com facilidade por quem está procurando ajuda.</p>
+                    </div>
+                </div>
+                <!-- Card Item -->
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-primary-200 transition-colors flex gap-4 items-start">
+                    <div class="p-3 bg-primary-50 rounded-lg text-primary-700 shrink-0">
+                        <i class="ph-bold ph-link text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-neutral-900 mb-2">Link Único Profissional</h4>
+                        <p class="text-sm text-neutral-600">Para concentrar todos os acessos importantes (WhatsApp, formulário, página vitrine) em um único link profissional.</p>
+                    </div>
+                </div>
+                <!-- Card Item -->
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-primary-200 transition-colors flex gap-4 items-start">
+                    <div class="p-3 bg-primary-50 rounded-lg text-primary-700 shrink-0">
+                        <i class="ph-bold ph-identification-card text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-neutral-900 mb-2">Cartão Digital Clicável</h4>
+                        <p class="text-sm text-neutral-600">Para enviar um cartão elegante e funcional no WhatsApp, em vez de só compartilhar um número.</p>
+                    </div>
+                </div>
+                <!-- Card Item -->
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-primary-200 transition-colors flex gap-4 items-start">
+                    <div class="p-3 bg-primary-50 rounded-lg text-primary-700 shrink-0">
+                        <i class="ph-bold ph-lock-key text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-neutral-900 mb-2">Infraestrutura Técnica Segura</h4>
+                        <p class="text-sm text-neutral-600">Para seu site funcionar de forma estável e segura, sem você precisar entender de tecnologia.</p>
+                    </div>
+                </div>
+                <!-- Card Item -->
+                <div class="bg-white p-6 rounded-xl border border-neutral-200 hover:border-primary-200 transition-colors flex gap-4 items-start">
+                    <div class="p-3 bg-primary-50 rounded-lg text-primary-700 shrink-0">
+                        <i class="ph-bold ph-envelope-simple text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-neutral-900 mb-2">E-mail Profissional</h4>
+                        <p class="text-sm text-neutral-600">Para reforçar profissionalismo em cada contato, desde o primeiro envio de e-mail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 7: COMO FUNCIONA (Redesign: Timeline Vertical Conectada) -->
+    <section id="como-funciona" class="py-24 bg-white">
+        <div class="mx-auto max-w-4xl px-6">
+            <h2 class="section-title text-center mb-16">Como funciona, passo a passo</h2>
+            
+            <div class="relative pl-8 border-l-2 border-neutral-100 space-y-12">
+                <!-- Passo 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-8 h-8 rounded-full bg-primary-600 text-white font-bold flex items-center justify-center text-sm shadow-md ring-4 ring-white">1</div>
+                    <h4 class="text-xl font-bold text-neutral-900 mb-2">Formulário de aplicação</h4>
+                    <p class="text-neutral-600 leading-relaxed">Você preenche um formulário rápido, para eu entender seu momento, sua clínica e sua relação com o público bariátrico.</p>
+                </div>
+                <!-- Passo 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-8 h-8 rounded-full bg-primary-600 text-white font-bold flex items-center justify-center text-sm shadow-md ring-4 ring-white">2</div>
+                    <h4 class="text-xl font-bold text-neutral-900 mb-2">Chamada estratégica (online)</h4>
+                    <p class="text-neutral-600 leading-relaxed">Nós fazemos uma conversa de alinhamento, em que aprofundo nas suas necessidades, esclareço dúvidas sobre ética e exposição, e definimos juntos prioridades da sua estrutura digital mínima.</p>
+                </div>
+                <!-- Passo 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-8 h-8 rounded-full bg-primary-600 text-white font-bold flex items-center justify-center text-sm shadow-md ring-4 ring-white">3</div>
+                    <h4 class="text-xl font-bold text-neutral-900 mb-2">Diagnóstico e desenho da estratégia</h4>
+                    <p class="text-neutral-600 leading-relaxed">A partir da chamada, eu organizo o Mapa Estratégico de Marca & Público, avalio nome, domínios disponíveis e proponho a estrutura ideal para você naquele momento.</p>
+                </div>
+                <!-- Passo 4 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-8 h-8 rounded-full bg-primary-600 text-white font-bold flex items-center justify-center text-sm shadow-md ring-4 ring-white">4</div>
+                    <h4 class="text-xl font-bold text-neutral-900 mb-2">Criação da sua estrutura digital</h4>
+                    <p class="text-neutral-600 leading-relaxed">Eu cuido da parte técnica e visual: página vitrine, Google Business Profile, link único, cartão digital, domínio, hospedagem, SSL e e-mail profissional.</p>
+                </div>
+                <!-- Passo 5 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-8 h-8 rounded-full bg-primary-600 text-white font-bold flex items-center justify-center text-sm shadow-md ring-4 ring-white">5</div>
+                    <h4 class="text-xl font-bold text-neutral-900 mb-2">Ajustes finais e entrega</h4>
+                    <p class="text-neutral-600 leading-relaxed">Você revisa a página, sugerimos ajustes de linguagem juntos (sempre cuidando da ética e da sensibilidade do tema bariátrica) e finalizamos tudo.</p>
+                </div>
+                <!-- Passo 6 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-8 h-8 rounded-full bg-green-600 text-white font-bold flex items-center justify-center text-sm shadow-md ring-4 ring-white"><i class="ph-bold ph-check"></i></div>
+                    <h4 class="text-xl font-bold text-neutral-900 mb-2">Orientações de uso</h4>
+                    <p class="text-neutral-600 leading-relaxed">Você recebe orientações claras (e, se quiser, um passo a passo gravado) sobre como atualizar informações básicas, como usar seu link único e como aproveitar sua nova presença digital de forma leve e sustentável.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="https://wa.me/SEU_NUMERO" class="btn-primary w-full sm:w-auto">
+                    Quero aplicar para organizar minha estrutura digital
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 8: ÉTICA (Redesign: Seção de Destaque Escuro) -->
+    <section class="py-24 bg-neutral-900 text-neutral-300">
+        <div class="mx-auto max-w-3xl px-6 text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-900 text-primary-400 mb-6">
+                <i class="ph-fill ph-shield-check text-4xl"></i>
+            </div>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium text-white mb-6">Ética em primeiro lugar: comunicação como extensão do cuidado</h2>
+            
+            <div class="text-lg leading-relaxed space-y-6">
+                <p>
+                    Trabalhar com bariátrica significa lidar diariamente com histórias de dor, tentativas, recaídas, vergonha e pressão estética.
+                </p>
+                <p>
+                    Por isso, a Estrutura Digital Essencial foi pensada para: respeitar o Código de Ética Profissional da Psicologia; evitar qualquer promessa de cura, emagrecimento ou resultado garantido; proteger você e suas pacientes de discursos gordofóbicos ou de culpabilização; e delimitar claramente a diferença entre conteúdo educativo e o que é do campo da psicoterapia.
+                </p>
+            </div>
+
+            <div class="mt-10 bg-neutral-800 p-8 rounded-2xl border border-neutral-700 text-left md:text-center shadow-xl">
+                <p>
+                    <strong class="text-white">Nessa jornada, nós NÃO vamos:</strong> criar promessas milagrosas, usar gatilhos de escassez agressivos, transformar sua clínica em reality show, ou forçar uma exposição que não faça sentido para a sua história.
+                </p>
+                <div class="w-16 h-1 bg-primary-600 mx-auto mt-6 rounded-full"></div>
+                <p class="mt-6 font-medium text-white text-lg">
+                    A proposta é simples: usar a comunicação como extensão do cuidado que você já oferece na clínica, para que mais pessoas possam encontrar esse cuidado.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 9: DEPOIMENTOS (Placeholder Elegante) -->
+    <section class="py-24 bg-white">
+        <div class="mx-auto max-w-4xl px-4 text-center">
+            <h2 class="section-title mb-10">O que outras profissionais dizem</h2>
+            <div class="p-12 border border-dashed border-neutral-300 rounded-2xl bg-neutral-50 text-neutral-500">
+                <i class="ph-fill ph-quotes text-4xl text-neutral-300 mb-4 block mx-auto"></i>
+                <p class="mb-4 font-serif text-lg italic text-neutral-600">"Em breve, você verá aqui relatos de psicólogas que já organizaram sua estrutura digital com esse método."</p>
+                <p class="text-sm font-semibold text-primary-700 bg-primary-50 inline-block px-4 py-1 rounded-full">Nesta primeira turma, você entra com condições especiais e participa da construção dos primeiros cases.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 10: FAQ (Redesign: Accordion Limpo) -->
+    <section class="py-24 bg-neutral-50">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title text-center mb-16">Perguntas frequentes</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-neutral-200 p-6 shadow-sm cursor-pointer open:ring-2 open:ring-primary-100 open:border-primary-200 transition-all">
+                    <summary class="flex items-center justify-between font-semibold text-neutral-900 list-none">
+                        Isso é só para psicólogas bariátricas?
+                        <i class="ph-bold ph-caret-down text-neutral-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-neutral-600 leading-relaxed">O foco deste serviço são psicólogas que atendem ou desejam atender pacientes bariátricos, pré ou pós-cirurgia, e pessoas com histórico de obesidade, compulsão alimentar e vergonha corporal. Se esse é um público central para você, faz sentido. Se não for, talvez outro tipo de estrutura faça mais sentido.</p>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-neutral-200 p-6 shadow-sm cursor-pointer open:ring-2 open:ring-primary-100 open:border-primary-200 transition-all">
+                    <summary class="flex items-center justify-between font-semibold text-neutral-900 list-none">
+                        Vou precisar ficar gravando reels e aparecendo o tempo todo?
+                        <i class="ph-bold ph-caret-down text-neutral-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-neutral-600 leading-relaxed">Não. A proposta aqui é construir uma base sólida e mínima: página vitrine, Google, link único, cartão digital, e-mail profissional. Se você quiser produzir conteúdo depois, ótimo. Mas a estrutura não depende de você virar influencer, dançar ou seguir todas as tendências.</p>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-neutral-200 p-6 shadow-sm cursor-pointer open:ring-2 open:ring-primary-100 open:border-primary-200 transition-all">
+                    <summary class="flex items-center justify-between font-semibold text-neutral-900 list-none">
+                        Eu não entendo nada de tecnologia. Vou dar conta?
+                        <i class="ph-bold ph-caret-down text-neutral-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-neutral-600 leading-relaxed">Sim. A ideia é justamente essa: eu cuido da parte técnica para que você não precise entender de hospedagem, SSL, domínio, integrações… Você fica com a parte que é sua: clínica, posicionamento e decisões estratégicas, e recebe orientações simples para usar a estrutura no dia a dia.</p>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-neutral-200 p-6 shadow-sm cursor-pointer open:ring-2 open:ring-primary-100 open:border-primary-200 transition-all">
+                    <summary class="flex items-center justify-between font-semibold text-neutral-900 list-none">
+                        Em quanto tempo tudo fica pronto?
+                        <i class="ph-bold ph-caret-down text-neutral-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-neutral-600 leading-relaxed">O prazo exato depende do seu tempo de resposta para revisões, mas em geral: X a Y semanas desde a primeira conversa até a entrega final.</p>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-neutral-200 p-6 shadow-sm cursor-pointer open:ring-2 open:ring-primary-100 open:border-primary-200 transition-all">
+                    <summary class="flex items-center justify-between font-semibold text-neutral-900 list-none">
+                        Isso pode me prejudicar com o CRP/CFP?
+                        <i class="ph-bold ph-caret-down text-neutral-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-neutral-600 leading-relaxed">A proposta da Estrutura Digital Essencial é justamente o contrário: reduzir riscos, alinhar linguagem e evitar promessas antiéticas. Tudo é pensado para reforçar a seriedade do seu trabalho e o respeito às normas da psicologia.</p>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-neutral-200 p-6 shadow-sm cursor-pointer open:ring-2 open:ring-primary-100 open:border-primary-200 transition-all">
+                    <summary class="flex items-center justify-between font-semibold text-neutral-900 list-none">
+                        Você faz também gestão de redes sociais e conteúdo contínuo?
+                        <i class="ph-bold ph-caret-down text-neutral-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-neutral-600 leading-relaxed">Não. Aqui o foco é criar a estrutura mínima bem feita. Se, depois disso, você quiser pensar em conteúdo contínuo, podemos conversar sobre indicações ou formatos que façam sentido para você.</p>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-neutral-200 p-6 shadow-sm cursor-pointer open:ring-2 open:ring-primary-100 open:border-primary-200 transition-all">
+                    <summary class="flex items-center justify-between font-semibold text-neutral-900 list-none">
+                        E se eu investir e depois não der conta de manter?
+                        <i class="ph-bold ph-caret-down text-neutral-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-neutral-600 leading-relaxed">Por ser uma estrutura mínima, ela foi pensada para ser sustentável: você não precisa postar todos os dias, nem ficar revisando dezenas de páginas. Sua “casinha digital” continua de pé, mesmo em períodos em que você está mais focada em clínica, estudos ou vida pessoal.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 11: FINAL CALL (Redesign: Foco e Clareza) -->
+    <section class="py-24 bg-white text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-3xl md:text-5xl font-medium text-neutral-900 mb-8 leading-tight">
+                Seu trabalho com bariátricos merece ser encontrado – <span class="text-neutral-500 italic">sem culpa e sem fórmulas agressivas.</span>
+            </h2>
+            <p class="text-xl text-neutral-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Você estudou anos, se especializou, se expôs emocionalmente ao escolher trabalhar com um público sensível e, ainda assim, muitas pessoas que precisam do que você oferece não conseguem te encontrar.
+            </p>
+            
+            <div class="bg-primary-50 rounded-2xl p-8 mb-12 max-w-3xl mx-auto border border-primary-100">
+                <p class="text-lg font-medium text-primary-900">
+                    A Estrutura Digital Essencial existe para isso: uma estrutura digital mínima, ética e profissional, para que seu trabalho com bariátricos seja encontrado pelas pessoas certas – sem você precisar virar influencer, nem trair sua ética.
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="https://wa.me/SEU_NUMERO" class="btn-primary">
+                    <i class="ph-bold ph-whatsapp-logo mr-2 text-xl"></i>
+                    Quero aplicar para organizar minha estrutura digital
+                </a>
+                <a href="https://wa.me/SEU_NUMERO" class="text-neutral-600 font-medium hover:text-primary-700 underline decoration-neutral-300 underline-offset-4">
+                    Ainda em dúvida? Quero falar com você antes de decidir
+                </a>
+            </div>
+            
+            <p class="mt-20 text-xs text-neutral-400 uppercase tracking-widest">
+                &copy; 2025 Estrutura Digital Essencial. Todos os direitos reservados.
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
