@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Essence | Estrutura Digital para Psicólogas Bariátricas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        secondary: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans antialiased text-gray-800">
+    <!-- Header Component -->
+    <custom-header></custom-header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-gradient-to-r from-primary-600 to-secondary-600">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        Presença Digital <span class="text-secondary-200">Ética</span> para Psicólogas Bariátricas
+                    </h1>
+                    <p class="text-xl text-primary-100 mb-8 max-w-lg">
+                        Estrutura profissional mínima para seu consultório ser encontrado - sem culpa, sem fórmulas agressivas de marketing.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#application" class="bg-white text-primary-700 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg transition transform hover:-translate-y-1">
+                            Quero minha estrutura
+                        </a>
+                        <a href="#how-it-works" class="border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-lg font-semibold text-lg transition">
+                            Como funciona
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="http://static.photos/wellness/640x360/42" alt="Psicóloga atendendo" class="rounded-xl shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition">
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-white transform skew-y-1 -mb-8 z-10"></div>
+    </section>
+
+    <!-- For You Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Isso é pra você se...</h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="heart" class="text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Atende pacientes bariátricos</h3>
+                    <p class="text-gray-600">Ou quer começar a atender esse público com ética e cuidado.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Sente culpa com marketing</h3>
+                    <p class="text-gray-600">Tem medo de trair a ética ou ser julgada por colegas.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="cpu" class="text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Se sente perdida com tecnologia</h3>
+                    <p class="text-gray-600">Não quer virar expert em redes sociais ou sites.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="upload-cloud" class="text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Já postou mas não vê resultados</h3>
+                    <p class="text-gray-600">Seu conteúdo não se converte em pacientes.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="clock" class="text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Está sobrecarregada</h3>
+                    <p class="text-gray-600">O marketing parece mais uma tarefa impossível na sua lista.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="users" class="text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Quer um modelo ético</h3>
+                    <p class="text-gray-600">Não se vê nas estratégias agressivas de marketing digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Difficult Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <img src="http://static.photos/medical/640x360/23" alt="Dificuldades" class="rounded-xl shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Por que é tão difícil fazer marketing sendo psicóloga bariátrica?</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Não é falta de capacidade sua. O desafio vem da natureza do seu trabalho:
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
+                                    <i data-feather="check" class="text-white w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 text-gray-700"><span class="font-semibold">Exigências éticas rigorosas</span> - Você precisa comunicar sem prometer resultados terapêuticos</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
+                                    <i data-feather="check" class="text-white w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 text-gray-700"><span class="font-semibold">Tema sensível</span> - Peso e corpo são assuntos complexos que exigem cuidado na comunicação</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
+                                    <i data-feather="check" class="text-white w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 text-gray-700"><span class="font-semibold">Falta de formação em marketing</span> - Você é especialista em psicologia, não em vendas ou tecnologia</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
+                                    <i data-feather="check" class="text-white w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <p class="ml-3 text-gray-700"><span class="font-semibold">Sobrecarga emocional</span> - Atender pacientes bariátricos já exige muito, e o marketing parece mais um peso</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">A Estrutura Digital Essencial</h2>
+                <p class="text-xl text-gray-600 mb-10">
+                    Não é um kit pronto. É um serviço personalizado que organiza o <span class="font-semibold text-primary-600">mínimo digital necessário</span> para seu consultório ser encontrado - com ética e profissionalismo.
+                </p>
+                <div class="bg-primary-50 p-8 rounded-xl border border-primary-100">
+                    <p class="text-lg font-semibold text-primary-800">
+                        "Antes de apertar qualquer botão, organizamos sua base: identidade clínica, público bariátrico e uma estrutura digital que transmita confiança."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">O Método em 3 Etapas</h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-2xl font-bold text-primary-600">1</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Clareza Estratégica</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Mapa Estratégico de Marca & Público</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Validação de Nome & Domínio</span>
+                        </li>
+                    </ul>
+                    <p class="mt-6 text-sm text-gray-500 italic">
+                        "Antes de qualquer site, definimos quem você atende e como se posicionar."
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-2xl font-bold text-primary-600">2</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Presença Profissional</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Página Vitrine Profissional</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Presença no Google (Google Business)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Link Único Profissional</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Cartão Digital Clicável</span>
+                        </li>
+                    </ul>
+                    <p class="mt-6 text-sm text-gray-500 italic">
+                        "Montamos onde seus pacientes vão te encontrar e como entrar em contato."
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-2">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-2xl font-bold text-primary-600">3</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Infraestrutura Técnica</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Domínio e Hospedagem</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Certificado SSL (site seguro)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>E-mail Profissional</span>
+                        </li>
+                    </ul>
+                    <p class="mt-6 text-sm text-gray-500 italic">
+                        "Deixamos o lado técnico pronto para você não se preocupar."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">O Que Você Recebe</h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="flex items-start">
+                    <div class="bg-primary-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                        <i data-feather="compass" class="text-primary-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Mapa Estratégico</h3>
+                        <p class="text-gray-600">Documento que traduz quem você é como psicóloga e quem você quer atender.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="bg-primary-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                        <i data-feather="check-circle" class="text-primary-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Validação de Nome</h3>
+                        <p class="text-gray-600">Análise do nome escolhido com checagem de domínio disponível.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="bg-primary-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                        <i data-feather="globe" class="text-primary-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Página Vitrine</h3>
+                        <p class="text-gray-600">Uma página clara que explica seu trabalho e convida ao contato.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="bg-primary-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                        <i data-feather="map-pin" class="text-primary-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Presença no Google</h3>
+                        <p class="text-gray-600">Seu consultório aparecendo corretamente no Google Maps.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="bg-primary-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                        <i data-feather="link" class="text-primary-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Link Único</h3>
+                        <p class="text-gray-600">Página estilo "link na bio" com seu domínio, não um Linktree.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="bg-primary-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                        <i data-feather="credit-card" class="text-primary-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Cartão Digital</h3>
+                        <p class="text-gray-600">Cartão clicável para WhatsApp com seus dados profissionais.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="bg-primary-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                        <i data-feather="lock" class="text-primary-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Infraestrutura Segura</h3>
+                        <p class="text-gray-600">Domínio, hospedagem e SSL para seu site não mostrar "não seguro".</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="bg-primary-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                        <i data-feather="mail" class="text-primary-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">E-mail Profissional</h3>
+                        <p class="text-gray-600">Trocar o @gmail.com por um e-mail com seu domínio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Como Funciona na Prática</h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-1/2 w-1 h-full bg-primary-100 transform -translate-x-1/2 hidden md:block"></div>
+                    
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center mb-12">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 order-1 md:order-2">
+                            <h3 class="text-2xl font-semibold text-primary-600 mb-4">1. Diagnóstico Estratégico</h3>
+                            <p class="text-gray-600">
+                                Iniciamos com uma entrevista aprofundada para entender seu consultório, pacientes e desafios específicos com bariátricos.
+                            </p>
+                        </div>
+                        <div class="md:w-1/2 flex justify-center order-2 md:order-1">
+                            <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row items-center mb-12">
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <h3 class="text-2xl font-semibold text-primary-600 mb-4">2. Desenvolvimento Personalizado</h3>
+                            <p class="text-gray-600">
+                                Criamos sua estrutura digital com base no diagnóstico, sempre priorizando ética e cuidado na comunicação sobre peso e corpo.
+                            </p>
+                        </div>
+                        <div class="md:w-1/2 flex justify-center">
+                            <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                                2
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center mb-12">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 order-1 md:order-2">
+                            <h3 class="text-2xl font-semibold text-primary-600 mb-4">3. Revisão Conjunta</h3>
+                            <p class="text-gray-600">
+                                Você avalia cada elemento e sugerimos ajustes para garantir que tudo reflita sua prática clínica com fidelidade.
+                            </p>
+                        </div>
+                        <div class="md:w-1/2 flex justify-center order-2 md:order-1">
+                            <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                                3
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <h3 class="text-2xl font-semibold text-primary-600 mb-4">4. Entrega e Orientação</h3>
+                            <p class="text-gray-600">
+                                Entregamos tudo pronto e oferecemos um tutorial simples para você usar sua nova estrutura digital com confiança.
+                            </p>
+                        </div>
+                        <div class="md:w-1/2 flex justify-center">
+                            <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                                4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ethics Section -->
+    <section class="py-20 bg-primary-700 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Ética & Segurança</h2>
+                <p class="text-xl mb-8">
+                    Nosso compromisso com a prática psicológica responsável
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 text-left mb-12">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <i data-feather="check-circle" class="mr-2"></i> O Que Fazemos
+                        </h3>
+                        <ul class="space-y-2">
+                            <li>• Respeitamos integralmente o Código de Ética da Psicologia</li>
+                            <li>• Cuidado especial com linguagem sobre peso e corpo</li>
+                            <li>• Limites claros entre marketing e prática clínica</li>
+                            <li>• Comunicação que protege pacientes e terapeuta</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <i data-feather="x-circle" class="mr-2"></i> O Que Não Fazemos
+                        </h3>
+                        <ul class="space-y-2">
+                            <li>• Promessas de resultados terapêuticos</li>
+                            <li>• Estratégias agressivas de vendas</li>
+                            <li>• Exposição excessiva da profissional</li>
+                            <li>• Linguagem que possa reforçar gordofobia</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="italic">
+                    "Seu marketing deve ser uma extensão do seu cuidado - não sua contradição."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">O Que Dizem Psicólogas</h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/1" alt="Dra. Ana" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Dra. Ana Carvalho</h4>
+                            <p class="text-sm text-gray-500">Psicóloga Bariátrica - São Paulo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Finalmente encontrei uma forma de me posicionar sem sentir que estava traindo a ética. Minha página reflete exatamente quem sou como profissional."
+                    </p>
+                    <div class="mt-4 flex">
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/2" alt="Dra. Beatriz" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Dra. Beatriz Rocha</h4>
+                            <p class="text-sm text-gray-500">Psicóloga - Rio de Janeiro</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Depois de anos evitando marketing por medo de julgamento, ter uma estrutura profissional feita sob medida me deu segurança para ser encontrada."
+                    </p>
+                    <div class="mt-4 flex">
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                        <i data-feather="star" class="text-yellow-400 w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Perguntas Frequentes</h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <!-- FAQ Item 1 -->
+                    <div class="border-b border-gray-200">
+                        <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">Isso é só para psicólogas bariátricas?</h3>
+                                <i data-feather="chevron-down" class="text-primary-500 transform transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Sim, trabalhamos exclusivamente com psicólogas que atendem ou querem atender pacientes bariátricos. Isso nos permite criar estruturas realmente adaptadas às necessidades específicas desse nicho.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border-b border-gray-200">
+                        <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">Vou precisar aparecer dançando em Reels?</h3>
+                                <i data-feather="chevron-down" class="text-primary-500 transform transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Absolutamente não. A Estrutura Digital Essencial foi criada justamente para psicólogas que não querem (ou não podem) adotar estratégias de influencer. Seu posicionamento será profissional e respeitoso.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border-b border-gray-200">
+                        <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">Não entendo nada de tecnologia, vou dar conta?</h3>
+                                <i data-feather="chevron-down" class="text-primary-500 transform transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Sim! Justamente por isso existe a Estrutura Digital Essencial. Nós cuidamos de toda a parte técnica e entregamos tudo funcionando, com orientações simples para você usar no dia a dia.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border-b border-gray-200">
+                        <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">Em quanto tempo fica pronto?</h3>
+                                <i data-feather="chevron-down" class="text-primary-500 transform transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                O processo completo leva em média 3-4 semanas, dependendo da complexidade e da sua disponibilidade para feedbacks. Mas você começa a ver resultados desde as primeiras etapas.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="border-b border-gray-200">
+                        <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">Isso pode me prejudicar com o CRP/CFP?</h3>
+                                <i data-feather="chevron-down" class="text-primary-500 transform transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Pelo contrário. Todo o material é desenvolvido com estrito respeito ao Código de Ética Profissional. Inclusive, muitas psicólogas nos procuram justamente para garantir que seu marketing esteja em conformidade.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 6 -->
+                    <div class="border-b border-gray-200">
+                        <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-semibold">Vocês fazem também gestão de redes ou conteúdo contínuo?</h3>
+                                <i data-feather="chevron-down" class="text-primary-500 transform transition-transform duration-300"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Não, nosso foco é entregar a estrutura essencial para que você seja encontrada. Para gestão contínua, recomendamos parceiros especializados em saúde mental que trabalham com o mesmo cuidado ético.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="application" class="py-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronta para Ter uma Presença Digital com Ética?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Deixe sua estrutura digital pronta para receber os pacientes certos - sem culpa e sem complicações técnicas.
+            </p>
+            <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Agende uma Conversa</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Seu Nome" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-700">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Seu E-mail" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-700">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Seu WhatsApp" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-700">
+                        </div>
+                        <button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                            Quero Minha Estrutura
+                        </button>
+                    </form>
+                    <p class="mt-4 text-sm text-gray-600">
+                        Seus dados estão seguros conosco. Não enviamos spam.
+                    </p>
+                </div>
+            </div>
+            <p class="mt-8 text-primary-100">
+                Ou envie um WhatsApp direto: <a href="https://wa.me/5511999999999" class="font-semibold underline">(11) 99999-9999</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
